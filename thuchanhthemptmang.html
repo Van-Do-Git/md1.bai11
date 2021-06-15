@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>them phan tu vao mang</title>
+</head>
+<body>
+<input id ="vietvao" type="text"/>
+<input type="button" value ="Add" onclick="themx();"/>
+<input type="button" value = "Hienthi" onclick="hienthi();"/>
+<div id = "ketqua"></div>
+<script>
+  let x = 0;
+  let mang = Array();
+  function themx(){
+    mang[x] = document.getElementById("vietvao").value;
+    alert ("da them phan tu" + mang[x] +" vao vi tri" + x);
+    x++;
+    document.getElementById("vietvao").value ="";
+  }
+  function hienthi(){
+    let e = "</hr>";
+    for (i=0;i< mang.length ;i++){
+       e += mang[i] +"<br>";
+    }
+    document.getElementById("ketqua").innerHTML=e;
+  }
+
+
+
+</script>
+<!--<input type="text" id="txtValue"/>-->
+<!--<input type="button" id="btnAdd" value="Add" onClick="add_element_to_array();"/>-->
+<!--<input type="button" id="btnDisplay" value="Display" onClick="display_array();"/>-->
+<!--<div id="result"></div>-->
+<!--<script>-->
+<!--    let x = 0;-->
+<!--    let array = Array();-->
+<!--    function add_element_to_array() {-->
+<!--        array[x] = document.getElementById("txtValue").value;-->
+<!--        alert("Element: " + array[x] + " Added at index " + x);-->
+<!--        x++;-->
+<!--        document.getElementById("txtValue ").value = "";-->
+<!--    }-->
+<!--&lt;!&ndash;    function display_array() {&ndash;&gt;-->
+<!--        let e = "<hr/>";-->
+<!--        for (let i = 0; i < array.length; i++) {-->
+<!--            e += "Element " + i + " = " + array[i] + "<br/>";-->
+<!--        }-->
+<!--        document.getElementById("result").innerHTML = e;-->
+<!--    }-->
+<!--</script>-->

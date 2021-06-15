@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh dao nguoc mang</title>
+</head>
+<body>
+<script>
+    let x = [4, 5, 7, 3, 10,76];
+   let i = 0;
+   let j =x.length -1;
+   let doicho=0;
+   while (i<j){
+       doicho = x[i];
+       x[i]=x[j];
+       x[j]= doicho;
+       i++;
+       j--
+   }
+   document.write(x);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ca ro simple</title>
+</head>
+<body>
+<h1>Co ca ro</h1>
+<p id ="banco">
+
+</p>
+<input type="button" value ="Nuoc di" onclick="ghinuocdi();">
+<script>
+    let mang =[];
+    let hienthimang = "";
+    for (i=0; i<5; i++){
+        mang[i]= [0,0,0,0,0];
+    }
+    for (i=0; i<5; i++){
+        for (j=0; j<5; j++){
+            hienthimang += mang [i][j] +"&nbsp&nbsp&nbsp";
+        }
+        hienthimang+= "<br>";
+    }
+    document.getElementById("banco").innerHTML = hienthimang;
+    function ghinuocdi(){
+        x= +prompt("ban muon ghi vao tao do x =?");
+        y= +prompt("ban muon ghi vao tao do y =?");
+        mang[x][y]= "x";
+        hienthimang=""
+    for (i=0;i<5;i++) {
+        for (j = 0; j < 5; j++) {
+            hienthimang += mang [i][j] + "&nbsp&nbsp&nbsp";
+        }
+        hienthimang += "<br>";
+    }
+        document.getElementById("banco").innerHTML = hienthimang;
+    }
+</script>
+</body>
+</html>
